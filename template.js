@@ -72,5 +72,37 @@ multi Comment
 // const companyName3="Miuul Frontend JS";
 // console.error(companyName3);
 
+////////////////////////////////////////////////////
+// OPERATORS 
+// let miuulData1=23;
+// let miuulData2=5;
+
+// Aritmetics Operators
+// console.log(miuulData1+miuulData2);
+// let result1=miuulData1-miuulData2;
+// console.log(result1);
+// console.log(miuulData1*miuulData2);
+// console.log(miuulData1/miuulData2);
+// console.log(miuulData1%miuulData2);
+
+// Karşılaştırma Operatör 
+// console.log(miuulData1>miuulData2);
+// console.log(miuulData1<miuulData2);
+// console.log(miuulData1==miuulData2);
+// console.log(miuulData1===miuulData2);
+// console.log(miuulData1!==miuulData2);
+
+// Atama Operatör 
+// const data1=10,data2="10";
+// console.log(data1==data2);
+// console.log(data1===data2);
+
+// Mantıksal Operatör 
+// const data3=true,data4=false;
+// console.log(data3&&data4);
+// console.log(data3||data4);
 
 ////////////////////////////////////////////////////
+// Prompt
+// const userData=prompt("Lütfen adınızı giriniz");
+// console.log(userData);
