@@ -109,38 +109,85 @@ multi Comment
 
 ////////////////////////////////////////////////////
 // Math 
-console.log(Math.PI);
-console.log(Math.E);
+// console.log(Math.PI);
+// console.log(Math.E);
 
-console.log(Math.sqrt(25));
-console.log(Math.pow(5,2));
-console.log(5**2);
-console.log(Math.abs(-5));
+// console.log(Math.sqrt(25));
+// console.log(Math.pow(5,2));
+// console.log(5**2);
+// console.log(Math.abs(-5));
 
-console.log(Math.min(2,5,66,-100));
-console.log(Math.max(2,5,66,-100));
+// console.log(Math.min(2,5,66,-100));
+// console.log(Math.max(2,5,66,-100));
 
-console.log(Math.floor(5.9));
-console.log(Math.ceil(7.1));
-console.log(Math.round(8.4));
-console.log(Math.round(8.5));
+// console.log(Math.floor(5.9));
+// console.log(Math.ceil(7.1));
+// console.log(Math.round(8.4));
+// console.log(Math.round(8.5));
 
-console.log(Math.sin(8.5));
-console.log(Math.cos(8.5));
-console.log(Math.asin(-1));
-console.log(Math.acos(-1));
-console.log(Math.tan(-1));
-console.log(1/Math.tan(-1));
+// console.log(Math.sin(8.5));
+// console.log(Math.cos(8.5));
+// console.log(Math.asin(-1));
+// console.log(Math.acos(-1));
+// console.log(Math.tan(-1));
+// console.log(1/Math.tan(-1));
 
-console.log(Math.random()*10+1);
-console.log(Math.floor(Math.random()*10+1) );
-let number=Math.random()*10+1;
-console.log(Math.floor(number) );
+// console.log(Math.random()*10+1);
+// console.log(Math.floor(Math.random()*10+1) );
+// let number=Math.random()*10+1;
+// console.log(Math.floor(number) );
 
 ////////////////////////////////////////////////////
 // Escape Characters
-console.log("Merhaba \"Miuul Frontend"); 
-console.log("Merhaba \'Miuul Frontend"); 
-console.log("Merhaba \'Miuul\n Frontend"); 
-console.log("Merhaba \'Miuul\n\t Frontend"); 
-console.log("Merhaba \'Miuul\n\r Frontend"); 
+// console.log("Merhaba \"Miuul Frontend"); 
+// console.log("Merhaba \'Miuul Frontend"); 
+// console.log("Merhaba \'Miuul\n Frontend"); 
+// console.log("Merhaba \'Miuul\n\t Frontend"); 
+// console.log("Merhaba \'Miuul\n\r Frontend"); 
+
+////////////////////////////////////////////////////
+// Typeof 
+let data=44;
+console.log(typeof data);
+
+let name="Miuul";
+console.log(typeof name);
+
+let isLogin=true;
+console.log(typeof isLogin);
+
+// Instanceof 
+let objectInstance=new Number(44); 
+console.log(objectInstance  instanceof Number);
+
+// New : Doğdu
+let dataNew=new Number(44);
+console.log(dataNew);
+
+// Null: Vefat
+dataNew=null;
+console.log(dataNew);
+
+// undefined
+let dataNumber;
+dataNumber=99;
+console.log(dataNumber);
+
+// NaN 
+let result=10/10;
+console.log(result);
+
+let result2=10/"10";
+console.log(result2);
+
+let result3=10/"abcdf";
+console.log(result3);
+
+// isNaN: tru dönüyorsa sayı değildir
+console.log(isNaN(result3));
+console.log(!isNaN(result3));
+
+// hoisting
+ dataNumber2=55;
+var dataNumber2;
+console.log(dataNumber2);
