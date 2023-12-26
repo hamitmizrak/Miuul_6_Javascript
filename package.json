@@ -1,0 +1,12 @@
+{
+  "name": "6_javascript_git_kodlar",
+  "version": "1.0.0",
+  "description": "[GitHub]([Miuul_6_Javascript](https://github.com/hamitmizrak/Miuul_6_Javascript))",
+  "main": "template.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
