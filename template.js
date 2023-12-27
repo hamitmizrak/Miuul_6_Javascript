@@ -245,47 +245,76 @@ multi Comment
 ////////////////////////////////////////////////////
 //  Metinsel İşlemler
 
-let miuulMetinsel="javascript ÖĞReniyorUM javascript ";
-let miuulMetinsel2="html5,css3,js";
+// let miuulMetinsel="javascript ÖĞReniyorUM javascript ";
+// let miuulMetinsel2="html5,css3,js";
 
-// BOŞLUKLAR
-console.log(miuulMetinsel); 
-console.log(miuulMetinsel.length); 
-console.log(miuulMetinsel.trim().length); 
+// // BOŞLUKLAR
+// console.log(miuulMetinsel); 
+// console.log(miuulMetinsel.length); 
+// console.log(miuulMetinsel.trim().length); 
 
-// BÜYÜK KÜÇüK HARF
-console.log(miuulMetinsel.toUpperCase()); 
-console.log(miuulMetinsel.toLowerCase()); 
+// // BÜYÜK KÜÇüK HARF
+// console.log(miuulMetinsel.toUpperCase()); 
+// console.log(miuulMetinsel.toLowerCase()); 
 
-// ARAMA
-console.log(miuulMetinsel.indexOf("javascript")); 
-console.log(miuulMetinsel.lastIndexOf("javascript")); 
-console.log(miuulMetinsel.includes("javascript"));
+// // ARAMA
+// console.log(miuulMetinsel.indexOf("javascript")); 
+// console.log(miuulMetinsel.lastIndexOf("javascript")); 
+// console.log(miuulMetinsel.includes("javascript"));
 
-// BİRLEŞTİRME
-console.log(miuulMetinsel+" "+miuulMetinsel2); 
-console.log(miuulMetinsel.concat(miuulMetinsel2)); 
+// // BİRLEŞTİRME
+// console.log(miuulMetinsel+" "+miuulMetinsel2); 
+// console.log(miuulMetinsel.concat(miuulMetinsel2)); 
 
-// PARÇALAMA
-console.log(miuulMetinsel.substring(3)); 
-console.log(miuulMetinsel.substring(0,3)); 
+// // PARÇALAMA
+// console.log(miuulMetinsel.substring(3)); 
+// console.log(miuulMetinsel.substring(0,3)); 
 
-// DEĞİŞTİRME
-console.log(miuulMetinsel.replace("javascript","Miuul")); 
+// // DEĞİŞTİRME
+// console.log(miuulMetinsel.replace("javascript","Miuul")); 
 
-/// CHARAT
-console.log(miuulMetinsel.charAt(1)); 
+// /// CHARAT
+// console.log(miuulMetinsel.charAt(1)); 
 
-// WITH
-console.log(miuulMetinsel.startsWith("javascript")); 
-console.log(miuulMetinsel.endsWith(" ")); 
-
-
-// CAST (Metinsel)
-let dataMetinsel=44;
-console.log(dataMetinsel);
-console.log(typeof dataMetinsel);
-console.log(typeof dataMetinsel.toString());
-console.log(typeof String(dataMetinsel));
+// // WITH
+// console.log(miuulMetinsel.startsWith("javascript")); 
+// console.log(miuulMetinsel.endsWith(" ")); 
 
 
+// // CAST (Metinsel)
+// let dataMetinsel=44;
+// console.log(dataMetinsel);
+// console.log(typeof dataMetinsel);
+// console.log(typeof dataMetinsel.toString());
+// console.log(typeof String(dataMetinsel));
+
+////////////////////////////////////////////////////
+//  Metinsel İşlemler
+// 1-) returnsuz Parametresiz
+function returnsuzParametresiz(){
+    console.log("Merhaba Miuul");
+}
+returnsuzParametresiz();
+
+
+// 2-) returnsuz Parametreli
+function returnsuzParametreli(kelime,number){
+    console.log("Merhaba Miuul "+kelime+" "+number);
+}
+returnsuzParametreli("Javascript",44);
+
+
+// 3-) returnlu Parametresiz
+function returnluParametresiz(){
+    return "Merhaba Miuul"
+}
+let param3= returnluParametresiz();
+console.log(param3);
+
+
+// 4-) returnlu Parametresiz
+function returnluParametreli(isLogin){
+    return isLogin;
+}
+let param4= returnluParametreli(false);
+console.log(param4);
