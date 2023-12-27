@@ -322,28 +322,73 @@ multi Comment
 ////////////////////////////////////////////////////
 //  Function Türleri
 // Immedia Function
-(function () {
-    console.log("Immedia Function - Anonymous Function");
-})();
+// (function () {
+//     console.log("Immedia Function - Anonymous Function");
+// })();
 
-(() => {
-    console.log("Immedia Function -Arrow Function");
-})();
+// (() => {
+//     console.log("Immedia Function -Arrow Function");
+// })();
 
-// Normal function
-function toplama(x, y) { 
-    return x + y;
- }
-console.log(toplama(5, 6));
+// // Normal function
+// function toplama(x, y) { 
+//     return x + y;
+//  }
+// console.log(toplama(5, 6));
 
-// Anonymous function
-let toplama2 = function (x, y) {
-     return x + y; 
+// // Anonymous function
+// let toplama2 = function (x, y) {
+//      return x + y; 
+//     }
+// console.log(toplama2(5, 6));
+
+// // Arrow function
+// const toplama3 = (x, y) => { 
+//     return x + y;
+//  }
+// console.log(toplama3(5, 6));
+
+////////////////////////////////////////////////////
+//  Conditional (Karar)
+const conditional = () => {
+    let isLogin = true;
+    //if(isLogin==="true"){
+    //if(isLogin=="true"){
+    // if (isLogin) {
+    //     console.log("Giriş yapıldı");
+    // } else {
+    //     console.log("Giriş yapılmadı");
+    // }
+    if (isLogin)
+        console.log("Giriş yapıldı");
+    else
+        console.log("Giriş yapılmadı");
+}
+//conditional();
+
+const conditional2 = () => {
+    let isMuul = -9;
+    if (isMuul > 0) {
+        console.log("Pozitif Sayı");
+    } else {
+        console.log("Negatif Sayı");
     }
-console.log(toplama2(5, 6));
 
-// Arrow function
-const toplama3 = (x, y) => { 
-    return x + y;
- }
-console.log(toplama3(5, 6));
+}
+//conditional2()
+
+const conditional3 = () => {
+    let isMuul = 0;
+    if (isMuul > 0) {
+        console.log("Pozitif Sayı");
+    } else if (isMuul < 0) {
+        console.log("Negatif Sayı");
+    } else {
+        console.log("Sıfırdır");
+    }
+}
+conditional3();
+
+//////////////////////////////////////////////////////
+// Ternary 
+//  Switch-case
