@@ -493,4 +493,115 @@ const exceptionHandling = () => {
     // THROW
     throw new Error("Neden sayıyı sıfıra böldün");
 }
-exceptionHandling()
+//exceptionHandling();
+
+
+//////////////////////////////////////////////////////
+// Debug
+const debugData = () => {
+    let value = "Miuul For ";
+    for (let i = 1; i <= 5; i++) {
+        console.log(value + i * 1);
+
+        if (i == 4) {
+            //debugger; 
+        }
+
+    }
+}
+//debugData();
+
+//////////////////////////////////////////////////////
+// SetTimeOut
+const setTimeOutFunction = () => {
+    // Arrow Function
+    // setTimeout(() => {
+    //     console.log("2 saniye sonra çalış ve dur");
+    // }, 2000);
+
+    // Anonymous Function
+    setTimeout(function () {
+        console.log("2 saniye sonra çalış ve dur");
+    }, 2000);
+
+}
+//setTimeOutFunction();
+
+const setIntervalFunction = () => {
+    // Arrow Function
+    // setInterval(() => {
+    //     console.log("1.5 saniye sonra çalış ve devam et");
+    // }, 1500);
+
+    // Anonymous Function
+    setInterval(function () {
+        console.log("1.5 saniye sonra çalış ve devam et");
+    }, 1500);
+}
+//setIntervalFunction();
+
+const setIntervalFunction2 = () => {
+
+    // Arrow Function
+    let clockTime = () => {
+        console.log("1.saniye çalışsın");
+    }
+
+    let intervalID = setInterval(clockTime, 1000);
+
+    setTimeout(() => {
+        clearInterval(intervalID);
+        console.log("5 saniye sonra dursun");
+    }, 5000);
+}
+//setIntervalFunction2();
+
+//////////////////////////////////////////////////////
+// Monad
+const monad = () => {
+    // 1.Function
+    const data1 = (number) => {
+        return Math.sqrt(number)
+    }
+
+    const data2 = (number) => {
+        return Math.pow(number,3)
+    }
+
+  let result=  data2(data1(25));
+  console.log(result);
+}
+//monad()
+
+// Senkron - Asenkron
+// Callback function
+const callbackFunction = () => {
+    const data1 = (number, callback) => {
+        setTimeout(() => {
+            callback(number)
+        }, 1000);
+    }
+
+    const data2 = (number, callback) => {
+        setTimeout(() => {
+            callback(number)
+        }, 1000);
+    }
+
+    const data3 = (number, callback) => {
+        setTimeout(() => {
+            callback(number)
+        }, 1000);
+    }
+
+    data1(5, (number1) => {
+        console.log("data1 "+ number1);
+        data2(Math.pow(number1,2) , (number2) => {
+            console.log("data2 "+number2);
+            data3(Math.pow(number2,2) , (number3) => {
+                console.log("data3 "+number3);
+            })
+        })
+    })
+}
+callbackFunction()
