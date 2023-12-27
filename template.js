@@ -412,7 +412,7 @@ const conditionalIfElse = () => {
         console.log("Bilinmiyor");
     }
 }
-conditionalIfElse()
+//conditionalIfElse()
 
 
 const conditionalSwitch = () => {
@@ -432,4 +432,50 @@ const conditionalSwitch = () => {
             break;
     }
 }
-conditionalSwitch()
+//conditionalSwitch()
+
+//////////////////////////////////////////////////////
+
+// LOOP
+const forLoop = () => {
+    let value = "Miuul For";
+    for (let i = 1; i <= 5; i++) {
+        console.log(value + i);
+    }
+
+    //sonsuz döngü
+   // for(;;){}
+}
+forLoop()
+
+console.log("***********************");
+const whileLoop = () => {
+    let value = "Miuul While";
+    let i = 1;
+
+    while ( i <= 5) {
+        console.log(value + i);
+        i=i+1;
+    }
+    
+    //sonsuz döngü
+   // while(true){}
+}
+whileLoop();
+
+console.log("***********************");
+const doWhileLoop = () => {
+    let value = "Miuul do-While ";
+    let i = 1;
+    do{
+        console.log(value + i);
+        //i++;
+        //i=i+1;
+        i+=1;
+    }
+    while ( i <= 5);
+    
+    //sonsuz döngü
+   // while(true){}
+}
+doWhileLoop()
