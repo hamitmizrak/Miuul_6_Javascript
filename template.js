@@ -289,32 +289,61 @@ multi Comment
 // console.log(typeof String(dataMetinsel));
 
 ////////////////////////////////////////////////////
-//  Metinsel İşlemler
+//  Function 
 // 1-) returnsuz Parametresiz
-function returnsuzParametresiz(){
-    console.log("Merhaba Miuul");
-}
-returnsuzParametresiz();
+// function returnsuzParametresiz(){
+//     console.log("Merhaba Miuul");
+// }
+// returnsuzParametresiz();
 
 
-// 2-) returnsuz Parametreli
-function returnsuzParametreli(kelime,number){
-    console.log("Merhaba Miuul "+kelime+" "+number);
-}
-returnsuzParametreli("Javascript",44);
+// // 2-) returnsuz Parametreli
+// function returnsuzParametreli(kelime,number){
+//     console.log("Merhaba Miuul "+kelime+" "+number);
+// }
+// returnsuzParametreli("Javascript",44);
 
 
-// 3-) returnlu Parametresiz
-function returnluParametresiz(){
-    return "Merhaba Miuul"
-}
-let param3= returnluParametresiz();
-console.log(param3);
+// // 3-) returnlu Parametresiz
+// function returnluParametresiz(){
+//     return "Merhaba Miuul"
+// }
+// let param3= returnluParametresiz();
+// console.log(param3);
 
 
-// 4-) returnlu Parametresiz
-function returnluParametreli(isLogin){
-    return isLogin;
-}
-let param4= returnluParametreli(false);
-console.log(param4);
+// // 4-) returnlu Parametresiz
+// function returnluParametreli(isLogin){
+//     return isLogin;
+// }
+// let param4= returnluParametreli(false);
+// console.log(param4);
+
+////////////////////////////////////////////////////
+//  Function Türleri
+// Immedia Function
+(function () {
+    console.log("Immedia Function - Anonymous Function");
+})();
+
+(() => {
+    console.log("Immedia Function -Arrow Function");
+})();
+
+// Normal function
+function toplama(x, y) { 
+    return x + y;
+ }
+console.log(toplama(5, 6));
+
+// Anonymous function
+let toplama2 = function (x, y) {
+     return x + y; 
+    }
+console.log(toplama2(5, 6));
+
+// Arrow function
+const toplama3 = (x, y) => { 
+    return x + y;
+ }
+console.log(toplama3(5, 6));
