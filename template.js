@@ -435,7 +435,6 @@ const conditionalSwitch = () => {
 //conditionalSwitch()
 
 //////////////////////////////////////////////////////
-
 // LOOP
 const forLoop = () => {
     let value = "Miuul For";
@@ -444,38 +443,54 @@ const forLoop = () => {
     }
 
     //sonsuz döngü
-   // for(;;){}
+    // for(;;){}
 }
-forLoop()
+//forLoop()
 
-console.log("***********************");
+//console.log("***********************");
 const whileLoop = () => {
     let value = "Miuul While";
     let i = 1;
-
-    while ( i <= 5) {
+    while (i <= 5) {
         console.log(value + i);
-        i=i+1;
+        i = i + 1;
     }
-    
-    //sonsuz döngü
-   // while(true){}
-}
-whileLoop();
 
-console.log("***********************");
+    //sonsuz döngü
+    // while(true){}
+}
+//whileLoop();
+
+//console.log("***********************");
 const doWhileLoop = () => {
     let value = "Miuul do-While ";
     let i = 1;
-    do{
+    do {
         console.log(value + i);
         //i++;
         //i=i+1;
-        i+=1;
+        i += 1;
     }
-    while ( i <= 5);
-    
+    while (i <= 5);
     //sonsuz döngü
-   // while(true){}
+    // while(true){}
 }
-doWhileLoop()
+//doWhileLoop()
+
+//////////////////////////////////////////////////////
+// Exception Handling
+const exceptionHandling = () => {
+    //const result=10/0;
+    try {
+        alertx("alert");
+    } catch (err) {
+        console.error(err);
+    } finally {
+        console.warn("Burası mutlaka çalışmalıdır.");
+    }
+    console.log("Merhabalar-1");
+
+    // THROW
+    throw new Error("Neden sayıyı sıfıra böldün");
+}
+exceptionHandling()
