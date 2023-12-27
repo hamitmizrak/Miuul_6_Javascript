@@ -623,13 +623,49 @@ const promiseFunction = () => {
                     reject("Hata oluştu");
                 }
             }, 1000);
-           }// end Promise
+        }// end Promise
         ) //end return
     }
 
     let result = data1(5);
     console.log(result);
-
 }
 
-promiseFunction()
+//promiseFunction()
+
+
+//////////////////////////////////////////////////////
+// async Await Function
+const asyncAwaitFunction = () => {
+    function promiseFunction(number) {
+        const isLogin = true;
+        // resolve: başarılıysa, 
+        // reject: başarısızsa
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (isLogin) {
+                    console.log(number + " Promise Çalıştı");
+                    resolve(number);
+                } else {
+                    reject("Hata oluştu");
+                }
+            }, 1000);
+        }).then((response) => {
+            console.log("Response: " + response);
+        }).then().catch((err) => { 
+            console.error(err);
+         });
+    }
+
+    // asyn AwaitData Funcion
+    let asynAwaitData = async () => {
+        try {
+            let asynData = await promiseFunction(44);
+            console.log(asynData);
+        } catch (err) {
+            console.error(err);
+        }
+    }
+    asynAwaitData();
+}
+asyncAwaitFunction()
