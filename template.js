@@ -565,11 +565,11 @@ const monad = () => {
     }
 
     const data2 = (number) => {
-        return Math.pow(number,3)
+        return Math.pow(number, 3)
     }
 
-  let result=  data2(data1(25));
-  console.log(result);
+    let result = data2(data1(25));
+    console.log(result);
 }
 //monad()
 
@@ -595,13 +595,41 @@ const callbackFunction = () => {
     }
 
     data1(5, (number1) => {
-        console.log("data1 "+ number1);
-        data2(Math.pow(number1,2) , (number2) => {
-            console.log("data2 "+number2);
-            data3(Math.pow(number2,2) , (number3) => {
-                console.log("data3 "+number3);
+        console.log("data1 " + number1);
+        data2(Math.pow(number1, 2), (number2) => {
+            console.log("data2 " + number2);
+            data3(Math.pow(number2, 2), (number3) => {
+                console.log("data3 " + number3);
             })
         })
     })
 }
-callbackFunction()
+//callbackFunction()
+
+
+//////////////////////////////////////////////////////
+// Promise
+const promiseFunction = () => {
+    function data1(number) {
+        const isLogin = false;
+        // resolve: başarılıysa, 
+        // reject: başarısızsa
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (isLogin) {
+                    console.log(number + " Promise Çalıştı");
+                    resolve(number);
+                } else {
+                    reject("Hata oluştu");
+                }
+            }, 1000);
+           }// end Promise
+        ) //end return
+    }
+
+    let result = data1(5);
+    console.log(result);
+
+}
+
+promiseFunction()
