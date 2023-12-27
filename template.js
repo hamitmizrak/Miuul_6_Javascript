@@ -366,17 +366,6 @@ const conditional = () => {
 }
 //conditional();
 
-const conditional2 = () => {
-    let isMuul = -9;
-    if (isMuul > 0) {
-        console.log("Pozitif Sayı");
-    } else {
-        console.log("Negatif Sayı");
-    }
-
-}
-//conditional2()
-
 const conditional3 = () => {
     let isMuul = 0;
     if (isMuul > 0) {
@@ -387,8 +376,60 @@ const conditional3 = () => {
         console.log("Sıfırdır");
     }
 }
-conditional3();
+//conditional3();
 
 //////////////////////////////////////////////////////
 // Ternary 
+const conditional2 = () => {
+    let isMuul = -9;
+    if (isMuul > 0) {
+        console.log("Pozitif Sayı");
+    } else {
+        console.log("Negatif Sayı");
+    }
+}
+//conditional2();
+
+
+const conditionalTernary = () => {
+    let isMuul = -9;
+    let result = (isMuul > 0) ? "Pozitif Sayı" : "Negatif Sayı";
+    console.log(result);
+}
+//conditionalTernary()
+
+//////////////////////////////////////////////////////
 //  Switch-case
+const conditionalIfElse = () => {
+    let isMuul = 0;
+    if (isMuul == 0) {
+        console.log("Sıfır");
+    } else if (isMuul == 1) {
+        console.log("Bir");
+    } else if (isMuul == 2) {
+        console.log("İki");
+    } else {
+        console.log("Bilinmiyor");
+    }
+}
+conditionalIfElse()
+
+
+const conditionalSwitch = () => {
+    let isMuul = 0;
+    switch (isMuul) {
+        case 0:
+            console.log("Sıfır");
+            break;
+        case 1:
+            console.log("Bir");
+            break;
+        case 2:
+            console.log("İki");
+            break;
+        default:
+            console.log("Bilinmiyor");
+            break;
+    }
+}
+conditionalSwitch()
