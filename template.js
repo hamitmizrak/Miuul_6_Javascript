@@ -146,48 +146,146 @@ multi Comment
 // console.log("Merhaba \'Miuul\n\r Frontend"); 
 
 ////////////////////////////////////////////////////
-// Typeof 
-let data=44;
-console.log(typeof data);
+// // Typeof 
+// let data=44;
+// console.log(typeof data);
 
-let name="Miuul";
-console.log(typeof name);
+// let name="Miuul";
+// console.log(typeof name);
 
-let isLogin=true;
-console.log(typeof isLogin);
+// let isLogin=true;
+// console.log(typeof isLogin);
 
-// Instanceof 
-let objectInstance=new Number(44); 
-console.log(objectInstance  instanceof Number);
+// // Instanceof 
+// let objectInstance=new Number(44); 
+// console.log(objectInstance  instanceof Number);
 
-// New : Doğdu
-let dataNew=new Number(44);
-console.log(dataNew);
+// // New : Doğdu
+// let dataNew=new Number(44);
+// console.log(dataNew);
 
-// Null: Vefat
-dataNew=null;
-console.log(dataNew);
+// // Null: Vefat
+// dataNew=null;
+// console.log(dataNew);
 
-// undefined
-let dataNumber;
-dataNumber=99;
-console.log(dataNumber);
+// // undefined
+// let dataNumber;
+// dataNumber=99;
+// console.log(dataNumber);
 
-// NaN 
-let result=10/10;
-console.log(result);
+// // NaN 
+// let result=10/10;
+// console.log(result);
 
-let result2=10/"10";
-console.log(result2);
+// let result2=10/"10";
+// console.log(result2);
 
-let result3=10/"abcdf";
-console.log(result3);
+// let result3=10/"abcdf";
+// console.log(result3);
 
-// isNaN: tru dönüyorsa sayı değildir
-console.log(isNaN(result3));
-console.log(!isNaN(result3));
+// // isNaN: tru dönüyorsa sayı değildir
+// console.log(isNaN(result3));
+// console.log(!isNaN(result3));
 
-// hoisting
- dataNumber2=55;
-var dataNumber2;
-console.log(dataNumber2);
+// // hoisting
+//  dataNumber2=55;
+// var dataNumber2;
+// console.log(dataNumber2);
+
+////////////////////////////////////////////////////
+//  Sayısal İşlemler 
+// let numberMiuul=44;
+// console.log(numberMiuul);
+// console.log(typeof numberMiuul);
+// console.log(isNaN(numberMiuul));
+
+// let numberMiuulFloat=44.23;
+// console.log(numberMiuulFloat);
+// console.log(typeof numberMiuulFloat);
+
+// let number2=4/0;
+// console.log(number2);
+
+// let bilimselGosterim=13E+5;
+// console.log(bilimselGosterim);
+
+// let bilimselGosterim2=1300000;
+// console.log(bilimselGosterim2);
+
+// let bilimselGosterim3=13E-5;
+// console.log(bilimselGosterim3);
+
+// // Sayı sistemleri (10 tabanda)
+
+// //2tabanda
+// let binary=0b00011100;
+// console.log(binary);
+
+// // 8 tabanda
+// let octal=0o74101; 
+// console.log(octal);
+
+// // 16 tabanda
+// let hexadecimal=0x01fed; 
+// console.log(hexadecimal);
+
+// // toFixed
+// const sayi=56.123456;
+// console.log(sayi.toFixed(4));
+// console.log(sayi.toPrecision(4));
+
+// //  Sayısal İşlemler (Cast)
+// let data1="10.1";
+// let data2="20.2";
+// console.log(data1+data2);
+// console.log(Number(data1)+Number(data2));
+// console.log(parseInt(data1)+parseInt(data2));
+// console.log(parseFloat(data1)+parseFloat(data2));
+
+////////////////////////////////////////////////////
+//  Metinsel İşlemler
+
+let miuulMetinsel="javascript ÖĞReniyorUM javascript ";
+let miuulMetinsel2="html5,css3,js";
+
+// BOŞLUKLAR
+console.log(miuulMetinsel); 
+console.log(miuulMetinsel.length); 
+console.log(miuulMetinsel.trim().length); 
+
+// BÜYÜK KÜÇüK HARF
+console.log(miuulMetinsel.toUpperCase()); 
+console.log(miuulMetinsel.toLowerCase()); 
+
+// ARAMA
+console.log(miuulMetinsel.indexOf("javascript")); 
+console.log(miuulMetinsel.lastIndexOf("javascript")); 
+console.log(miuulMetinsel.includes("javascript"));
+
+// BİRLEŞTİRME
+console.log(miuulMetinsel+" "+miuulMetinsel2); 
+console.log(miuulMetinsel.concat(miuulMetinsel2)); 
+
+// PARÇALAMA
+console.log(miuulMetinsel.substring(3)); 
+console.log(miuulMetinsel.substring(0,3)); 
+
+// DEĞİŞTİRME
+console.log(miuulMetinsel.replace("javascript","Miuul")); 
+
+/// CHARAT
+console.log(miuulMetinsel.charAt(1)); 
+
+// WITH
+console.log(miuulMetinsel.startsWith("javascript")); 
+console.log(miuulMetinsel.endsWith(" ")); 
+
+
+// CAST (Metinsel)
+let dataMetinsel=44;
+console.log(dataMetinsel);
+console.log(typeof dataMetinsel);
+console.log(typeof dataMetinsel.toString());
+console.log(typeof String(dataMetinsel));
+
+
