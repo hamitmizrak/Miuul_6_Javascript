@@ -817,7 +817,7 @@ const arrayMethod2 = () => {
 // Diziler splice,slice
 const arrayMethod3 = () => {
     let array = arrayDataSet();
-    let cloneArray=array;
+    let cloneArray = array;
     cloneArray.forEach((response) => {
         document.writeln(response);
     });
@@ -827,7 +827,7 @@ const arrayMethod3 = () => {
     // SPLICE (ÇIKARMA)
     // 3: başlangıç indis
     // 2: 2 tane eleman sil
-    cloneArray.splice(3,2)
+    cloneArray.splice(3, 2)
     cloneArray.forEach((response) => {
         document.writeln(response);
     });
@@ -839,15 +839,15 @@ const arrayMethod3 = () => {
     // 1: başlangıç indis
     // 0: Eleman çıkarma(Ekleme Yap)
     // 44,55 eklenecek veriler
-    cloneArray.splice(1,0,44,55)
+    cloneArray.splice(1, 0, 44, 55)
     cloneArray.forEach((response) => {
         document.writeln(response);
     });
 
     document.writeln("<br/>****<br/>");
     // SLICE (Dizilerde alt diziler oluştur)
-    let cloneArray2=array;
-    cloneArray2.slice(1,4).forEach((response) => {
+    let cloneArray2 = array;
+    cloneArray2.slice(1, 4).forEach((response) => {
         document.writeln(response);
     });
     document.writeln("<br/>****<br/>");
@@ -857,4 +857,40 @@ const arrayMethod3 = () => {
     });
 
 }
-arrayMethod3();
+//arrayMethod3();
+
+
+//////////////////////////////////////////////////////
+// Diziler map,filter,forEach
+const arrayMethod4 = () => {
+    let array = arrayDataSet();
+    let cloneArray = array;
+    cloneArray.forEach((response) => {
+        document.writeln(response);
+    });
+
+    document.writeln("<br/>*************<br/>");
+    let filterMiuulNumbers = cloneArray.filter((response) => {
+        return response > 5;
+    }).forEach((response) => {
+        document.writeln(response);
+    });
+
+    document.writeln("<br/>*************<br/>");
+
+    let filterMiuulNumbers2 = cloneArray.map((response) => {
+        return response * 2;
+    }).forEach((response) => {
+        document.writeln(response);
+    });
+
+    document.writeln("<br/>*************<br/>");
+    let filterMiuulNumbers3 = cloneArray.filter((response) => {
+        return response > 5;
+    }).map((response) => {
+        return response * 2;
+    }).forEach((response) => {
+        document.writeln(response);
+    });
+}
+arrayMethod4();
