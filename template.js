@@ -893,4 +893,43 @@ const arrayMethod4 = () => {
         document.writeln(response);
     });
 }
-arrayMethod4();
+//arrayMethod4();
+
+
+//////////////////////////////////////////////////////
+// Multiline
+const data1= () => {
+
+
+    // Multiline,
+    let multilineMiuul=` 1.satır
+    2.satır
+    3.satır
+    `; 
+    console.log(multilineMiuul);
+
+    //Interpolation
+    let miuulName="Frontend";
+    let miuulTech1="Html5";
+    let miuulTech2="Css3";
+    console.log(miuulName+" "+miuulTech1+" "+miuulTech2);
+    console.log(`${miuulName} ${miuulTech1} ${miuulTech2}`);
+
+        //Html Template
+        let NormMiuul=
+        "<ul>" +
+           "<li>"+"Merhabalar"+"</li>"
+           "<li>"+"Merhabalar"-2+"</li>"
+        "</ul>";
+        console.log(NormMiuul);
+
+        let htmlTemplateMiuul=`
+        <ul>
+            <li>Merhabalar</li>
+            <li>Merhabalar-2</li>
+        </ul>
+        `;
+        console.log(htmlTemplateMiuul);
+}
+
+data1 ();
