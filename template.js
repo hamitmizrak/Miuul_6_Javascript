@@ -783,7 +783,7 @@ const arrayMethod1 = () => {
 // arrayMethod1();
 ////////////////////////////////////////////arrayDataSet
 //////////////////////////////////////////////////////
-// Diziler push,unshift,pop, shift,delete
+// Diziler sort,reverse
 const arrayMethod2 = () => {
     let array = arrayDataSet();
     for (let data2 of array) {
@@ -807,8 +807,54 @@ const arrayMethod2 = () => {
     // }
 
     // SORT().REVERSE()
-    array.sort().reverse().forEach((response)=>{
+    array.sort().reverse().forEach((response) => {
         document.writeln(response);
     });
 }
-arrayMethod2();
+//arrayMethod2();
+
+//////////////////////////////////////////////////////
+// Diziler splice,slice
+const arrayMethod3 = () => {
+    let array = arrayDataSet();
+    let cloneArray=array;
+    cloneArray.forEach((response) => {
+        document.writeln(response);
+    });
+
+    document.writeln("<br/>****<br/>");
+
+    // SPLICE (ÇIKARMA)
+    // 3: başlangıç indis
+    // 2: 2 tane eleman sil
+    cloneArray.splice(3,2)
+    cloneArray.forEach((response) => {
+        document.writeln(response);
+    });
+
+
+    document.writeln("<br/>****<br/>");
+
+    // SPLICE (EKLEME)
+    // 1: başlangıç indis
+    // 0: Eleman çıkarma(Ekleme Yap)
+    // 44,55 eklenecek veriler
+    cloneArray.splice(1,0,44,55)
+    cloneArray.forEach((response) => {
+        document.writeln(response);
+    });
+
+    document.writeln("<br/>****<br/>");
+    // SLICE (Dizilerde alt diziler oluştur)
+    let cloneArray2=array;
+    cloneArray2.slice(1,4).forEach((response) => {
+        document.writeln(response);
+    });
+    document.writeln("<br/>****<br/>");
+    // Orijinal data bozulmadı
+    cloneArray2.forEach((response) => {
+        document.writeln(response);
+    });
+
+}
+arrayMethod3();
