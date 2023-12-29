@@ -897,39 +897,158 @@ const arrayMethod4 = () => {
 
 
 //////////////////////////////////////////////////////
-// Multiline
-const data1= () => {
-
+// Multiline,Interpolation,Html Template
+const data1 = () => {
 
     // Multiline,
-    let multilineMiuul=` 1.satır
+    let multilineMiuul = ` 1.satır
     2.satır
     3.satır
-    `; 
+    `;
     console.log(multilineMiuul);
 
     //Interpolation
-    let miuulName="Frontend";
-    let miuulTech1="Html5";
-    let miuulTech2="Css3";
-    console.log(miuulName+" "+miuulTech1+" "+miuulTech2);
+    let miuulName = "Frontend";
+    let miuulTech1 = "Html5";
+    let miuulTech2 = "Css3";
+    console.log(miuulName + " " + miuulTech1 + " " + miuulTech2);
     console.log(`${miuulName} ${miuulTech1} ${miuulTech2}`);
 
-        //Html Template
-        let NormMiuul=
+    //Html Template
+    let NormMiuul =
         "<ul>" +
-           "<li>"+"Merhabalar"+"</li>"
-           "<li>"+"Merhabalar"-2+"</li>"
-        "</ul>";
-        console.log(NormMiuul);
+        "<li>" + "Merhabalar" + "</li>"
+    "<li>" + "Merhabalar" - 2 + "</li>"
+    "</ul>";
+    console.log(NormMiuul);
 
-        let htmlTemplateMiuul=`
+    let htmlTemplateMiuul = `
         <ul>
             <li>Merhabalar</li>
             <li>Merhabalar-2</li>
         </ul>
         `;
-        console.log(htmlTemplateMiuul);
+    console.log(htmlTemplateMiuul);
 }
 
-data1 ();
+//data1();
+
+//////////////////////////////////////////////////////
+// Object
+const data2 = () => {
+    const miuulFrontend = {
+        brand: "Miuul",
+        model: "Frontend",
+        year: 2014,
+        isLogin: true,
+        start: function () {
+            //let data=this.brand+" "+"Frontend Öğreniyorum";
+            let data = `${this.brand} Frontend Öğreniyorum`;
+            console.log(data);
+        },
+        dizi:[0,44,2,3]
+    };
+    console.log(miuulFrontend);
+    console.log(miuulFrontend.brand);
+    console.log(miuulFrontend.brand.toUpperCase());
+    console.log(miuulFrontend.model);
+    console.log(miuulFrontend.year);
+    if (miuulFrontend.isLogin)
+        console.log("Giriş yapıldı");
+    else
+        console.log("Giriş yapılmadı");
+    miuulFrontend.start();
+
+    miuulFrontend.frontend = {
+        "name": "Html5",
+        "year": 2024
+    }
+    
+    console.log(miuulFrontend.frontend.name);
+    console.log(miuulFrontend["frontend"]["name"]);
+    console.log(miuulFrontend.dizi[1]);
+}
+//data2() 
+
+
+//////////////////////////////////////////////////////
+// Stringify
+const data3 = () => {
+
+    const miuulFrontend = {
+        brand: "Miuul",
+        model: "Frontend",
+        year: 2014,
+        isLogin: true,
+    };
+
+    // String'e çevirdim
+    let jsonString=JSON.stringify(miuulFrontend);
+    //jsonString= jsonString.toUpperCase();
+    console.log(jsonString);
+
+    // Parse
+    let miuul= JSON.parse(jsonString);
+    console.log(miuul);
+    console.log(miuul.brand);
+}
+//data3() 
+
+
+//////////////////////////////////////////////////////
+// Call
+const callMiuul = () => {
+
+    // Function
+    function miuulFunction(data){
+        console.log("call "+data+" "+this.company);
+    }
+
+    // Object
+    let miuulObject={
+        company:"Miuul Company"
+    }
+
+    miuulFunction.call(miuulObject,"Frontend Data44");
+
+}
+callMiuul() 
+
+
+// Apply
+const applyMiuul = () => {
+
+    // Function
+    function miuulFunction(data){
+        console.log("Apply "+data+" "+this.company);
+    }
+
+    // Object
+    let miuulObject={
+        company:"Miuul Company"
+    }
+
+    miuulFunction.apply(miuulObject,["Frontend Dizi"]);
+
+}
+applyMiuul() 
+
+
+// Apply
+const bindMiuul = () => {
+
+    // Function
+    function miuulFunction(data){
+        console.log("Bind "+data+" "+this.company);
+    }
+
+    // Object
+    let miuulObject={
+        company:"Miuul Company"
+    }
+
+   let result=miuulFunction.bind(miuulObject);
+   result("Frontend JS")
+
+}
+bindMiuul() 
