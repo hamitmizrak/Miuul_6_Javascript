@@ -652,12 +652,12 @@ const asyncAwaitFunction = () => {
             }, 1000);
         }).then((response) => {
             console.log("Response: " + response);
-        }).then().catch((err) => { 
+        }).then().catch((err) => {
             console.error(err);
-         });
+        });
     }
 
-    // asyn AwaitData Funcion
+    // Asyn Await Data Funcion
     let asynAwaitData = async () => {
         try {
             let asynData = await promiseFunction(44);
@@ -668,4 +668,60 @@ const asyncAwaitFunction = () => {
     }
     asynAwaitData();
 }
-asyncAwaitFunction()
+//asyncAwaitFunction()
+
+//////////////////////////////////////////////////////
+// Diziler
+const arrayFunction = () => {
+    let array = [1, 2, 3, 4, 5];
+    array[5] = 6;
+    array[6] = 7;
+    array[7] = 9;
+    //console.log(array);
+    document.writeln(array);
+    document.writeln("<br/>");
+    document.writeln(array[0]);
+    document.writeln("<br/>");
+    // document.writeln(array[7]);
+    document.writeln(array[7 - 1]);
+    document.writeln(array[7]);
+    document.writeln("<br/>");
+    document.writeln("lenght: " + array.length);
+    document.writeln("<br/>");
+    document.writeln(array[array.length - 1]);
+}
+//arrayFunction()
+
+//////////////////////////////////////////////////////arrayFunction
+
+const arrayDataSet = () => {
+    let array = [9, 1, 2, 6, 3, 5, 4];
+    return array;
+}
+
+//////////////////////////////////////////////////////
+// Diziler Döngüler
+const arrayLoop = () => {
+    let array = arrayDataSet();
+
+    // Iterative For
+    for (let i = 0; i < array.length; i++) {
+        document.writeln(array[i]);
+    }
+    document.writeln("<br/>****<br/>");
+
+    // for In
+    for (let data1 in array) {
+        //document.writeln(data1);
+        document.writeln(array[data1]);
+    }
+
+    document.writeln("<br/>****<br/>");
+
+    // for of
+    for (let data2 of array) {
+        //document.writeln(data1);
+        document.writeln(data2);
+    }
+}
+arrayLoop()
