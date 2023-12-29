@@ -738,46 +738,77 @@ const arrayMethod1 = () => {
     document.writeln("<br/>****<br/>");
 
     // Push (Sona Ekle)
-    array.push(44,23);
+    array.push(44, 23);
     for (let data2 of array) {
         //document.writeln(data1);
         document.writeln(data2);
     }
 
     document.writeln("<br/>****<br/>");
-     // unshift (Başa Ekle)
-     array.unshift(11,22);
-     for (let data2 of array) {
-         //document.writeln(data1);
-         document.writeln(data2);
-     }
+    // unshift (Başa Ekle)
+    array.unshift(11, 22);
+    for (let data2 of array) {
+        //document.writeln(data1);
+        document.writeln(data2);
+    }
 
-     document.writeln("<br/>****<br/>");
-     // pop (Sondan Eleman Çıkar)
-     array.pop();
-     for (let data2 of array) {
-         //document.writeln(data1);
-         document.writeln(data2);
-     }
+    document.writeln("<br/>****<br/>");
+    // pop (Sondan Eleman Çıkar)
+    array.pop();
+    for (let data2 of array) {
+        //document.writeln(data1);
+        document.writeln(data2);
+    }
 
-     document.writeln("<br/>****<br/>");
-     // pop (Baştan Eleman Çıkar)
-     array.shift();
-     for (let data2 of array) {
-         //document.writeln(data1);
-         document.writeln(data2);
-     }
+    document.writeln("<br/>****<br/>");
+    // pop (Baştan Eleman Çıkar)
+    array.shift();
+    for (let data2 of array) {
+        //document.writeln(data1);
+        document.writeln(data2);
+    }
 
 
-     document.writeln("<br/>****<br/>");
-     // delete (Belirtilen indiste eleman çıkar)
-     // Yerine undefined ekle dizi uzunluğunu değiştirme
-     delete array[0];
-     delete array[1];
-     for (let data2 of array) {
-         //document.writeln(data1);
-         document.writeln(data2);
-     }
+    document.writeln("<br/>****<br/>");
+    // delete (Belirtilen indiste eleman çıkar)
+    // Yerine undefined ekle dizi uzunluğunu değiştirme
+    delete array[0];
+    delete array[1];
+    for (let data2 of array) {
+        //document.writeln(data1);
+        document.writeln(data2);
+    }
 
 }
-arrayMethod1();
+// arrayMethod1();
+////////////////////////////////////////////arrayDataSet
+//////////////////////////////////////////////////////
+// Diziler push,unshift,pop, shift,delete
+const arrayMethod2 = () => {
+    let array = arrayDataSet();
+    for (let data2 of array) {
+        //document.writeln(data1);
+        document.writeln(data2);
+    }
+    document.writeln("<br/>****<br/>");
+
+    // SORT
+    // array.sort();
+    // for (let data2 of array) {
+    //     //document.writeln(data1);
+    //     document.writeln(data2);
+    // }
+
+    // REVERSE
+    // array.reverse();
+    // for (let data2 of array) {
+    //     //document.writeln(data1);
+    //     document.writeln(data2);
+    // }
+
+    // SORT().REVERSE()
+    array.sort().reverse().forEach((response)=>{
+        document.writeln(response);
+    });
+}
+arrayMethod2();
