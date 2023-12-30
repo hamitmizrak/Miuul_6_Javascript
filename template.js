@@ -1154,8 +1154,9 @@ let miuulDom=()=>{
    query1=document.querySelector("#querySelector1");
    query1.innerText="Miuul Paragraf Query Selector ID";
 
-   // QUERY Sraf Query Selector CLASS";
-
+   // QUERY SELECTOR (CLASS)
+   query1=document.querySelector(".querySelector2");
+   query1.innerText="Miuul Paragraf Query Selector CLASS";
 
 }
 //miuulDom()
