@@ -1012,7 +1012,7 @@ const callMiuul = () => {
     miuulFunction.call(miuulObject,"Frontend Data44");
 
 }
-callMiuul() 
+//callMiuul() 
 
 
 // Apply
@@ -1031,7 +1031,7 @@ const applyMiuul = () => {
     miuulFunction.apply(miuulObject,["Frontend Dizi"]);
 
 }
-applyMiuul() 
+//applyMiuul() 
 
 
 // Apply
@@ -1051,4 +1051,46 @@ const bindMiuul = () => {
    result("Frontend JS")
 
 }
-bindMiuul() 
+//bindMiuul() 
+
+
+//////////////////////////////////////////////////////
+// Event
+let miuulOnclick=()=>{
+    alert("1 kere tıklandı")
+}
+
+
+let miuulDblclick=()=>{
+    alert("2 kere tıklandı")
+    console.log("Miuul DBL Onclick");
+}
+
+let onmousewheelClick=()=>{
+    alert("mouse wheel")
+}
+
+
+// let onkeydownClick=()=>{
+//     alert("onkeydownClick")
+// }
+let onkeyupClick=()=>{
+    alert("onkeyupClick")
+}
+
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+// Add Event Listener
+let miuulAddEventListener=()=>{
+    console.log("miuul AddEvent Listener");
+
+    let buttonId=document.getElementById("addEventMiuul");
+    // click dblclick
+    buttonId.addEventListener("mouseleave",()=>{
+        console.log("Dinleyici Çalıştı");
+        alert("Dinleyici Çalıştı");
+    },
+    false);
+}
+
+miuulAddEventListener()
