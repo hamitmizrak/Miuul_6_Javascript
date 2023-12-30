@@ -1085,12 +1085,37 @@ let miuulAddEventListener=()=>{
     console.log("miuul AddEvent Listener");
 
     let buttonId=document.getElementById("addEventMiuul");
-    // click dblclick
-    buttonId.addEventListener("mouseleave",()=>{
+    // click dblclick mouseleave
+    buttonId.addEventListener("click",()=>{
         console.log("Dinleyici Çalıştı");
         alert("Dinleyici Çalıştı");
     },
     false);
 }
+//miuulAddEventListener();
 
-miuulAddEventListener()
+////////////////////////////////////////////////////////
+// Local Storage
+let miuulLocalStorage=()=>{
+    console.log("Local Storage");
+
+    let dataObject={
+        data1:"Miuul 1",
+        data2:"Miuul 2",
+    }
+
+    //SET
+    localStorage.setItem("username",dataObject.data1);
+    localStorage.setItem("data",dataObject.data2);
+
+    //GET
+    const miuulData=localStorage.getItem("username");
+    alert(miuulData);
+
+    //DELETE
+    localStorage.removeItem("username");
+
+    // ALL DELETE
+    localStorage.clear();
+}
+//miuulLocalStorage()
