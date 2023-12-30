@@ -1119,3 +1119,43 @@ let miuulLocalStorage=()=>{
     localStorage.clear();
 }
 //miuulLocalStorage()
+
+////////////////////////////////////////////////////////
+// DOM
+let miuulDom=()=>{
+    console.log("Dom Data");
+    let heading,paragraf1,paragraf2,button;
+    let query1,query2;
+
+    //HEADDING (ID)
+    //heading=document.getElementById("miuul_h1");
+    heading=window.document.getElementById("miuul_h1");
+    heading.textContent="Miuul Heading ID";
+
+    // PARAGRAF (CLASS)
+    paragraf1=document.getElementsByClassName("miuul_parag")[0];
+    paragraf1.innerHTML="<b><mark>Miuul Paragraf Class</mark></b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nam sequi ad commodi, velit ipsa alias quos mollitia dolores, reprehenderit soluta unde veniam, cumque harum necessitatibus sit tenetur omnis? Sunt?";
+   //paragraf.innerText="<b><mark>Miuul Paragraf</mark></b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nam sequi ad commodi, velit ipsa alias quos mollitia dolores, reprehenderit soluta unde veniam, cumque harum necessitatibus sit tenetur omnis? Sunt?";
+
+   // PARAGRAF (NAME)
+   paragraf2=document.getElementsByName("miuul_parag2")[0];
+   paragraf2.innerText="Miuul Paragraf Name";
+
+   // PARAGRAF (TAGNAME)
+   paragraf2=document.getElementsByTagName("p")[3];
+   paragraf2.innerText="Miuul Paragraf Tag Name";
+   // CSS
+   paragraf2.style.color="red";
+   paragraf2.style.backgroundColor="black";
+   paragraf2.style.padding="2rem";
+   paragraf2.style.paddingTop="5rem";
+
+   // QUERY SELECTOR (ID)
+   query1=document.querySelector("#querySelector1");
+   query1.innerText="Miuul Paragraf Query Selector ID";
+
+   // QUERY Sraf Query Selector CLASS";
+
+
+}
+//miuulDom()
